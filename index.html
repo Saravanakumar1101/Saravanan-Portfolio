@@ -1178,6 +1178,228 @@
           hsl(0, 0%, 19%) 97%);
     }
 
+    .form-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+button p {
+  margin: 0;
+}
+
+button span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+button:hover {
+  border-color: #d1d5db;
+}
+
+form {
+  padding: 24px;
+  width: 100%;
+}
+
+form h3 {
+  margin: 0;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+form p {
+  font-size: 11px;
+  margin: 16px 0;
+}
+
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 40px;
+  resize: none;
+}
+
+form textarea:focus {
+  border-color: #d1d5db;
+  outline: none;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form label {
+  display: inline-block;
+  font-size: 12px;
+  padding: 8px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 130px;
+  text-align: center
+}
+
+form input[type="radio"]:checked+label {
+  border-color: rgba(0, 0, 0, 0.6);
+  background: #f3f4f6;
+}
+
+form .drop-area {
+  position: relative;
+  margin-top: 16px;
+
+}
+
+form .drop-area label {
+  position: absolute;
+  top: -13px;
+  right: -1px;
+  background: #f5f5f5;
+  color: #333;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+form .drop-area label:hover {
+  border-color: #d1d5db;
+}
+
+form input[type="file"] {
+  display: none;
+}
+
+form .preview-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+form .preview-image {
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+}
+
+form .file-name {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+form .close-button {
+  font-size: 11px;
+  padding: 4px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form .close-button:hover {
+  border-color: #d1d5db;
+}
+
+form .w-form-done,
+form .w-form-fail {
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+form .w-form-done {
+  background-color: #d1fae5;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #065f46;
+}
+
+form .w-form-fail {
+  background-color: #fecaca;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #b91c1c;
+}
+
+form .w-form-fail p span {
+  font-weight: bold;
+}
+
+form .powered-by {
+  color: #999999;
+  font-size: 12px;
+  margin-right: 16px;
+}
+
+form .powered-by a {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+form .powered-by a:hover {
+  text-decoration: underline;
+}
+
+
+form button[type="submit"]:hover {
+  border-color: #d1d5db;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.form-inner {
+  margin: 20px 0;
+}
+
+.upload-container {
+  margin-top: 20px;
+}
+
+.drop-area {
+  border: 2px dashed #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.preview-container {
+  margin-top: 20px;
+  border: 1px solid #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preview-image {
+  width: 50px;
+  height: 50px;
+  background-color: #f0f0f0;
+}
+
+.file-name {
+  font-weight: bold;
+}
+
+.close-button {
+  cursor: pointer;
+  color: red;
+}
+
     /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -1813,6 +2035,13 @@
       }
 
     }
+
+    @media(min-width:320px) and (max-width:767px){
+    .form-inner{
+        flex-direction: column;
+    }
+
+}
   </Style>
 </head>
 
@@ -1842,7 +2071,7 @@
 
         <div class="separator"></div>
 
-        <ul class="contacts-list">
+    <ul class="contacts-list">
 
           <li class="contact-item">
 
@@ -1876,13 +2105,16 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
+              <ion-icon name="logo-linkedin"></ion-icon>
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Birthday</p>
+              <p class="contact-title">linkedin</p>
+              <a class="contact-link"
+                href="https://www.linkedin.com/in/saravanakumar1101?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" class="home__social-icon">linkedin-Profile
+              </a>
 
-              <time datetime="2002-01-11">January 11,2002</time>
             </div>
 
           </li>
@@ -1890,43 +2122,20 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
+              <ion-icon name="logo-github"></ion-icon>
+
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>TamilNadu-Tirunelveli</address>
+              <p class="contact-title">GitHub</p>
+              <a class="contact-link" href="https://github.com/Saravanakumar1101" target="_blank"
+                class="home__social-icon">
+                GitHub-Profile
+              </a>
             </div>
 
           </li>
 
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <a class="linkz"
-                href="https://www.linkedin.com/in/saravanakumar1101?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank" class="home__social-icon">
-                <ion-icon name="logo-linkedin"> </ion-icon>
-              </a>
-            </a>
-          </li>
-
-
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <a class="linkz" href="https://github.com/Saravanakumar1101" target="_blank" class="home__social-icon">
-                <ion-icon name="logo-github"></ion-icon>
-              </a>
-
-            </a>
-          </li>
         </ul>
       </div>
     </aside>
@@ -2771,6 +2980,83 @@
     document.querySelectorAll("[data-form-input]").forEach(input => {
       input.addEventListener("input", handleFormInput);
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const helpButton = document.getElementById("help-button");
+  const formContent = document.getElementById("form-content");
+  const radioButtons = document.querySelectorAll('input[name="subjectType"]');
+  const fileInput = document.getElementById("file-input");
+  const previewContainer = document.querySelector(".preview-container");
+  const fileNameSpan = document.querySelector(".file-name");
+  const removeButton = document.querySelector(".close-button");
+
+  // Condition 1: Show form when "Need help?" button is clicked
+  helpButton.addEventListener("click", () => {
+    formContent.classList.toggle("hidden");
+  });
+
+  // Condition 2: Handle remove button click
+  removeButton.addEventListener("click", () => {
+    fileInput.value = "";
+    previewContainer.classList.add("hidden");
+  });
+
+  // Condition 3: Ensure only one radio button is selected
+  radioButtons.forEach(radio => {
+    radio.addEventListener("change", () => {
+      radioButtons.forEach(rb => rb.checked = false);
+      radio.checked = true;
+    });
+  });
+
+  // Condition 4: Show file name when file is uploaded
+  fileInput.addEventListener("change", () => {
+    if (fileInput.files.length > 0) {
+      fileNameSpan.textContent = fileInput.files[0].name;
+      previewContainer.classList.remove("hidden");
+    } else {
+      previewContainer.classList.add("hidden");
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Select DOM elements
+  const fileInput = document.getElementById('file-input');
+  const previewContainer = document.querySelector('.preview-container');
+  const previewImage = document.querySelector('.preview-image');
+  const fileNameSpan = document.querySelector('.file-name');
+  const closeButton = document.querySelector('.close-button');
+
+  // Function to handle file selection
+  function handleFileSelect(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+
+      // Update the preview image
+      reader.onload = function (e) {
+        previewImage.style.backgroundImage = `url(${e.target.result})`;
+        previewContainer.classList.remove('hidden');
+        fileNameSpan.textContent = file.name;
+      };
+
+      reader.readAsDataURL(file);
+    }
+  }
+
+  // Function to handle file removal
+  function handleFileRemove() {
+    fileInput.value = ''; // Clear the file input
+    previewContainer.classList.add('hidden'); 
+    previewImage.style.backgroundImage = ''; 
+    fileNameSpan.textContent = ''; 
+  }
+
+  // Add event listeners
+  fileInput.addEventListener('change', handleFileSelect);
+  closeButton.addEventListener('click', handleFileRemove);
+});
 
 
   </script>
